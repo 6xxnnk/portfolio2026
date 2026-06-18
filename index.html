@@ -71,99 +71,127 @@
       </div>
     </header>
 
-    <!-- =========================
-      02. ABOUT ME (전체가 100vh에 들어오게 그리드 재배치)
-    ========================= -->
-    <section class="about section about-cvmap" id="about" aria-labelledby="aboutTitle">
-      <div class="container">
+<!-- =========================
+  02. ABOUT ME
+========================= -->
+<section class="about section about-cvmap" id="about" aria-labelledby="aboutTitle">
+  <div class="container">
 
-        <!-- 손글씨 타이틀 -->
-        <div class="cv-center" role="group" aria-label="About me heading" data-reveal>
-          <svg class="ink-title-svg" viewBox="0 0 1200 220" aria-labelledby="aboutTitle">
-            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" 
-            class="ink-title-stroke">  About me~*</text>
-          </svg>
+    <!-- 손글씨 타이틀 -->
+    <div class="cv-center" role="group" aria-label="About me heading" data-reveal>
+      <span class="cv-kicker">PROFILE BOARD</span>
+
+      <svg class="ink-title-svg" viewBox="0 0 1200 220" aria-labelledby="aboutTitle">
+        <text
+          id="aboutTitle"
+          x="50%"
+          y="50%"
+          text-anchor="middle"
+          dominant-baseline="middle"
+          class="ink-title-stroke"
+        >About me~*</text>
+      </svg>
+    </div>
+
+    <div class="cv-map-grid">
+
+      <article class="cv-card cv-card--profile" aria-labelledby="bioTitle" data-reveal>
+        <div class="cv-card__num">01</div>
+        <h3 id="bioTitle" class="cv-card__label">profile</h3>
+        <div class="cv-profile-name">
+          <strong>조윤경</strong>
+          <span>Yunkyung Cho</span>
         </div>
+        <p class="cv-profile-role">
+          Web Designer<br>
+          Marketing Designer
+        </p>
+      </article>
 
-        <!-- 프로필 이미지 -->
-<!--         <div class="profile">
-          <img src="img/Polaroid Stack.png" alt="#">
-        </div> -->
+      <article class="cv-card cv-card--philosophy" aria-labelledby="bio2Title" data-reveal>
+        <div class="cv-card__num">02</div>
+        <h3 id="bio2Title" class="cv-card__label">philosophy</h3>
+        <ul class="cv-list">
+          <li>브랜드의 감도와 사용자의 이해 흐름을 함께 설계합니다</li>
+          <li>보기 좋은 화면보다 읽히고 클릭되는 디자인을 만듭니다</li>
+        </ul>
+      </article>
 
+      <article class="cv-card cv-card--edu" aria-labelledby="eduTitle" data-reveal>
+        <div class="cv-card__num">03</div>
+        <h3 id="eduTitle" class="cv-card__label">education</h3>
+        <ul class="cv-list">
+          <li>단국대학교 법학과 졸업</li>
+          <li>그린컴퓨터아카데미</li>
+          <li>
+            ‘UI/UX 반응형 웹제작을 위한 웹퍼블리셔 프론트엔드’ 수료
+            <small>HTML · CSS · JS · 반응형 · Figma 프로토타입 실습 중심</small>
+          </li>
+        </ul>
+      </article>
 
-        <!-- 3x3 그리드로 모든 요소 한 화면에 배치 -->
-        <div class="cv-map-grid">
-          <article class="bubble oval bubble--bio" aria-labelledby="bioTitle" data-reveal>
-            <h3 id="bioTitle" class="bubble__label"></h3>
-            <ul class="list-plain">
-              <li><strong>조윤경</strong> Yunkyung Cho<br>
-              Web Designer & Marketing Designer</li>
-            </ul>
-          </article>
-          <article class="bubble oval bubble--bio2" aria-labelledby="bio2Title" data-reveal>
-            <h3 id="bio2Title" class="bubble__label">philosophy</h3>
-            <ul class="list-plain"> 
-              <li>브랜드의 감도와 사용자의 이해 흐름을 함께 설계합니다</li>
-              <li>보기 좋은 화면보다 읽히고 클릭되는 디자인을 만듭니다</li>
-            </ul>
-          </article>
-          <article class="bubble oval bubble--edu" aria-labelledby="eduTitle" data-reveal>
-            <h3 id="eduTitle" class="bubble__label">education</h3>
-            <ul class="list-plain">
-              <li>단국대학교 법학과 졸업</li>
-              <li><br> 그린컴퓨터아카데미</li>
-              <li> ‘UI/UX 반응형 웹제작을 위한 웹퍼블리셔 프론트엔드' 수료 
-                <br>(HTML·CSS·JS·반응형·Figma 프로토타입 실습 중심)</li>
-            </ul>
-          </article>
+      <article class="cv-card cv-card--char" aria-labelledby="charTitle" data-reveal>
+        <div class="cv-card__num">04</div>
+        <h3 id="charTitle" class="cv-card__label">character</h3>
+        <ul class="cv-list">
+          <li><b>Curiosity</b> 새로운 트렌드와 기술에 열린 태도</li>
+          <li><b>Precision</b> 디테일을 완성하는 실행력</li>
+          <li><b>Empathy</b> 사용자와 브랜드를 이해하는 감각</li>
+          <li><b>Growth</b> 스스로 기회를 만드는 성장형 마인드</li>
+        </ul>
+      </article>
 
-          <article class="bubble oval bubble--char" aria-labelledby="charTitle" data-reveal>
-            <h3 id="charTitle" class="bubble__label">character</h3>
-            <ul class="list-plain">
-              <li>Curiosity : 새로운 트렌드와 기술에 열린 태도</li>
-              <li>Precision : 디테일을 완성하는 실행력</li>
-              <li>Empathy : 사용자와 브랜드를 이해하는 감각</li>
-              <li>Growth : 스스로 기회를 만드는 성장형 마인드</li>
-            </ul>
-          </article>
+      <article class="cv-card cv-card--exp" aria-labelledby="expTitle" data-reveal>
+        <div class="cv-card__num">05</div>
+        <h3 id="expTitle" class="cv-card__label">experience</h3>
+        <ul class="cv-list">
+          <li>
+            <b>2025-2026 ㈜원츠 마케팅·웹디자인 실무</b>
+            병원 홈페이지 디자인/수정, 블로그 썸네일·카드뉴스·배너 제작
+          </li>
+          <li>
+            <b>2022 IT기업 ㈜와이폴라리스 마케팅 사원</b>
+            국제인공지능대전/리테일테크쇼 등 전시 기획 및 콘텐츠 운영
+          </li>
+          <li>
+            <b>브랜드 협업 SNS 콘텐츠 제작</b>
+            패션·뷰티 브랜드 중심 콘텐츠 기획·촬영·보정
+          </li>
+        </ul>
+      </article>
 
-          <article class="bubble oval bubble--exp" aria-labelledby="expTitle" data-reveal>
-            <h3 id="expTitle" class="bubble__label">experience</h3>
-            <ul class="list-plain">
-              <li>2025-2026 ㈜원츠 마케팅·웹디자인 실무<br>
-                  (병원 홈페이지 디자인/수정, 블로그 썸네일·카드뉴스·배너 제작)</li>
-              <li><br>2022 IT기업 ㈜와이폴라리스 마케팅 사원<br>
-                  (국제인공지능대전/리테일테크쇼 등 전시 기획 및 콘텐츠 운영)</li>
-              <li><br>브랜드 협업 SNS 콘텐츠 제작<br>
-                  (패션·뷰티 브랜드 중심 콘텐츠 기획·촬영·보정)</li>
+      <article class="cv-card cv-card--social" aria-labelledby="socialTitle" data-reveal>
+        <div class="cv-card__num">06</div>
+        <h3 id="socialTitle" class="cv-card__label">social</h3>
+        <ul class="cv-list">
+          <li>
+            Email
+            <a href="mailto:wholovesthesun@naver.com" class="cv-link tooltip-email">
+              wholovesthesun@naver.com
+            </a>
+          </li>
+          <li>
+            Instagram
+            <a href="https://instagram.com/6xxnnk" target="_blank" rel="noopener" class="cv-link tooltip-insta">
+              @6xxnnk
+            </a>
+          </li>
+        </ul>
+      </article>
 
-            </ul>
-          </article>
+      <article class="cv-card cv-card--skills" aria-labelledby="skillsTitle" data-reveal>
+        <div class="cv-card__num">07</div>
+        <h3 id="skillsTitle" class="cv-card__label">skills</h3>
+        <ul class="cv-list">
+          <li>Design: Photoshop, Illustrator, Figma</li>
+          <li>Frontend: HTML, CSS, JavaScript</li>
+          <li>Content: 카드뉴스, 블로그 썸네일, 배너</li>
+        </ul>
+      </article>
 
-          <article class="bubble oval bubble--social" aria-labelledby="socialTitle" data-reveal>
-          <h3 id="socialTitle" class="bubble__label">social</h3>
-          <ul class="list-plain">
-            <li>Email <a href="mailto:wholovesthesun@naver.com" class="tooltip-email">wholovesthesun@naver.com</a></li>
-            <li>Instagram <a href="https://instagram.com/6xxnnk" target="_blank" rel="noopener" class="tooltip-insta">@6xxnnk</a></li>
-            <li>
-<!--               <a href="img/조윤경_입사지원서.pdf" target="_blank" rel="noopener" class="tooltip-portfolio">이력서.pdf</a> -->
-            </li>          
-          </ul>
-          </article>
-
-          <article class="bubble oval bubble--skills" aria-labelledby="skillsTitle" data-reveal>
-            <h3 id="skillsTitle" class="bubble__label">skills</h3>
-            <ul class="list-plain">
-              <li>Design: Photoshop, Illustrator, Figma</li>
-              <li>Frontend: HTML, CSS, JavaScript</li>
-              <li>Content: 카드뉴스, 블로그 썸네일, 배너</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
+    </div>
+  </div>
+</section>
     
 <!-- =========================
 03 PROJECTS (세로 1열 큰 카드 + 지그재그 아이폰 4대)
@@ -190,10 +218,9 @@
         Website Publishing
       </h2>
       <p>
-        ㈜원츠에서 병원 홈페이지 디자인 보완, 반응형 화면 수정,
-        블로그 썸네일·카드뉴스·배너 제작을 진행했습니다.
-        단순히 예쁜 이미지를 만드는 것보다, 의료 콘텐츠에 맞는 신뢰감과
-        정보 전달력을 함께 고려했습니다.
+        ㈜원츠에서 진행한 병원 홈페이지 디자인 보완, 반응형 화면 수정,
+        블로그 썸네일·카드뉴스·배너 제작 <br>
+        의료 콘텐츠에 맞는 신뢰감과 정보 전달력을 함께 고려했습니다
       </p>
 
       <div class="wonts-chip-list" aria-label="원츠 실무 핵심 역량">
@@ -287,18 +314,15 @@
   WANTS BLOG CONTENT DESIGN
   대표 썸네일 클릭 → 카드뉴스 팝업 슬라이드
 ========================= -->
-<!-- =========================
-  WANTS BLOG CONTENT DESIGN
-  박스 안에서 바로 넘겨보는 카드뉴스 Swiper
-========================= -->
+
 <article class="wonts-content-showcase">
   <div class="wonts-content-head">
-    <span class="wonts-kicker">Blog Thumbnail / Card News / Banner</span>
+<!--     <span class="wonts-kicker">Blog Thumbnail / Card News / Banner</span> -->
     <h3>Blog content design</h3>
-    <p>
+<!--     <p>
       의료 콘텐츠는 과하게 자극적이면 신뢰도가 떨어지고, 너무 딱딱하면 클릭으로 이어지기 어렵습니다.
       그래서 주제별로 색감과 레이아웃을 다르게 잡되, 제목이 먼저 읽히는 구조와 깔끔한 정보 정리를 중심으로 작업했습니다.
-    </p>
+    </p> -->
   </div>
 
   <div class="wonts-content-meta">
@@ -314,51 +338,11 @@
 
     <article>
       <strong>03</strong>
-      <span>의료법을 고려한 과장 없는 문구와 신뢰감 있는 비주얼</span>
+      <span>과장 없는 문구와 신뢰감 있는 비주얼</span>
     </article>
   </div>
 
   <div class="blog-inline-swiper-grid" aria-label="원츠 병원 블로그 카드뉴스 작업물">
-
-    <!-- 01. 대상포진 -->
-    <article class="blog-inline-card">
-      <div class="blog-inline-swiper swiper blogSwiperPox">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="img/baekcheon-pox-02-main.jpg" alt="대상포진 대표 썸네일">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="img/baekcheon-pox-03-definition.jpg" alt="대상포진 정보 카드">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="img/baekcheon-pox-04-feature.jpg" alt="대상포진 비교 카드">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="img/baekcheon-pox-05-symptom.jpg" alt="대상포진 증상 카드">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="img/baekcheon-pox-01-treatment.jpg" alt="대상포진 치료 안내">
-          </div>
-        </div>
-
-        <div class="swiper-button-prev blog-pox-prev"></div>
-        <div class="swiper-button-next blog-pox-next"></div>
-        <div class="swiper-pagination blog-pox-pagination"></div>
-      </div>
-
-      <div class="blog-inline-info">
-        <span>01 / Baekcheon Clinic</span>
-        <h4>대상포진 카드뉴스</h4>
-        <p>
-          피부 질환 정보 콘텐츠로, 증상·특징·치료 안내를 한 흐름으로 읽히도록 구성했습니다.
-        </p>
-        <em>5 slides / Blog image</em>
-      </div>
-    </article>
 
     <!-- 02. 두통 -->
     <article class="blog-inline-card">
@@ -391,10 +375,50 @@
       </div>
 
       <div class="blog-inline-info">
-        <span>02 / Bingbing ENT Clinic</span>
+        <span>01 / Bingbing ENT Clinic</span>
         <h4>두통 카드뉴스</h4>
         <p>
           원인, 증상, 검진, 치료 정보를 순서대로 전달할 수 있도록 카드뉴스 구조를 정리했습니다.
+        </p>
+        <em>5 slides / Blog image</em>
+      </div>
+    </article>
+
+    <!-- 01. 대상포진 -->
+    <article class="blog-inline-card">
+      <div class="blog-inline-swiper swiper blogSwiperPox">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-02-main.jpg" alt="대상포진 대표 썸네일">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-03-definition.jpg" alt="대상포진 정보 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-04-feature.jpg" alt="대상포진 비교 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-05-symptom.jpg" alt="대상포진 증상 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-01-treatment.jpg" alt="대상포진 치료 안내">
+          </div>
+        </div>
+
+        <div class="swiper-button-prev blog-pox-prev"></div>
+        <div class="swiper-button-next blog-pox-next"></div>
+        <div class="swiper-pagination blog-pox-pagination"></div>
+      </div>
+
+      <div class="blog-inline-info">
+        <span>02 / Baekcheon Clinic</span>
+        <h4>대상포진 카드뉴스</h4>
+        <p>
+          피부 질환 정보 콘텐츠로, 증상·특징·치료 안내를 한 흐름으로 읽히도록 구성했습니다.
         </p>
         <em>5 slides / Blog image</em>
       </div>
