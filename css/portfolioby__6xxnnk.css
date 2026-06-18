@@ -857,14 +857,6 @@ button:hover ~ #cursorSun,
     padding:.55rem 1.2rem;
   }
 
-  .ink-title-svg{
-    height:11.5rem;
-  }
-
-  .ink-title-stroke{
-    font-size:7.8rem;
-  }
-
   .cv-map-grid{
     display:flex;
     flex-direction:column;
@@ -5388,5 +5380,194 @@ a,button,input,textarea,select{ cursor:pointer !important; }
     justify-content: flex-start !important;
     align-items: flex-start !important;
     text-align: left !important;
+  }
+}
+
+/* =========================
+   Creator Desc Responsive Fix
+   모바일 문단 가독성 조정
+========================= */
+
+@media (max-width: 1024px){
+
+  .creator__desc{
+    max-width: 62rem;
+    margin-inline: auto;
+    font-size: clamp(1.55rem, 1.7vw, 1.7rem);
+    line-height: 1.78;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 768px){
+
+  .creator__inner{
+    text-align: center;
+  }
+
+  .creator__desc{
+    max-width: 52rem;
+    margin: 0 auto 3rem;
+    font-size: 1.48rem;
+    line-height: 1.72;
+    text-align: left;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px){
+
+  .creator__desc{
+    max-width: 100%;
+    font-size: 1.38rem;
+    line-height: 1.68;
+    letter-spacing: -.01em;
+    text-align: left;
+  }
+}
+
+@media (max-width: 360px){
+
+  .creator__desc{
+    font-size: 1.32rem;
+    line-height: 1.65;
+  }
+}
+
+/* 모바일 About me 글자 크게 */
+@media (max-width: 640px){
+
+  .cv-center{
+    margin-bottom: 2.4rem;
+  }
+
+  .cv-center[data-reveal]{
+    opacity: 0 !important;
+    transform: translateY(2rem) scale(.96) !important;
+  }
+
+  .cv-center[data-reveal].is-visible{
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    transition:
+      opacity .75s ease,
+      transform .75s cubic-bezier(.22, 1, .36, 1) !important;
+  }
+
+  .cv-kicker{
+    font-size: 1rem;
+    letter-spacing: .16em;
+    padding: .58rem 1.25rem;
+    margin-bottom: -1.2rem;
+  }
+
+  .ink-title-svg{
+    height: 14rem;
+    width: 100%;
+  }
+
+  .ink-title-stroke{
+    font-size: 10.2rem;
+    stroke-width: .13rem;
+  }
+}
+
+/* 아주 작은 모바일 */
+@media (max-width: 420px){
+
+  .ink-title-svg{
+    height: 13rem;
+  }
+
+  .ink-title-stroke{
+    font-size: 9.3rem;
+  }
+}
+
+/* 360px 이하에서도 너무 작아지지 않게 */
+@media (max-width: 360px){
+
+  .ink-title-svg{
+    height: 12.4rem;
+  }
+
+  .ink-title-stroke{
+    font-size: 8.6rem;
+  }
+}
+/* =========================================================
+   ABOUT ME — Mobile Title Size Override
+   About me~* 모바일 글자 크기 강제 확대
+========================================================= */
+
+@media (max-width: 640px){
+
+  .about-cvmap .cv-center{
+    margin-bottom: 3rem !important;
+  }
+
+  .about-cvmap .cv-kicker{
+    font-size: 1rem !important;
+    letter-spacing: .16em !important;
+    padding: .58rem 1.25rem !important;
+    margin-bottom: -1.4rem !important;
+  }
+
+  .about-cvmap .ink-title-svg{
+    width: 120vw !important;
+    max-width: none !important;
+    height: 15.5rem !important;
+
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    overflow: visible !important;
+  }
+
+  .about-cvmap .ink-title-stroke{
+    font-size: 13rem !important;
+    stroke-width: .13rem !important;
+  }
+
+  .about-cvmap .cv-center[data-reveal]{
+    opacity: 0 !important;
+    transform: translateY(2rem) scale(.96) !important;
+  }
+
+  .about-cvmap .cv-center[data-reveal].is-visible{
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    transition:
+      opacity .75s ease,
+      transform .75s cubic-bezier(.22, 1, .36, 1) !important;
+  }
+}
+
+/* 작은 모바일 */
+@media (max-width: 420px){
+
+  .about-cvmap .ink-title-svg{
+    width: 126vw !important;
+    height: 15rem !important;
+  }
+
+  .about-cvmap .ink-title-stroke{
+    font-size: 12.5rem !important;
+  }
+}
+
+/* 아이폰 SE급 */
+@media (max-width: 360px){
+
+  .about-cvmap .ink-title-svg{
+    width: 130vw !important;
+    height: 14.2rem !important;
+  }
+
+  .about-cvmap .ink-title-stroke{
+    font-size: 11.6rem !important;
   }
 }
