@@ -1,0 +1,148 @@
+/* ===========================================
+   Global Tooltip (sunny glassy style)
+   사용법: 툴팁이 필요한 엘리먼트에 data-tooltip="문구"
+   위치 변경: data-tip-pos="top|bottom|left|right" (default: top)
+   모션 최소화 모드 대응, 키보드 focus 지원
+   =========================================== */
+
+:root{
+  --tt-bg-from:#fffdf4;
+  --tt-bg-to:#fff7cc;
+  --tt-bd:rgba(0,0,0,.12);
+  --tt-text:#111;
+  --tt-shadow:0 10px 24px rgba(0,0,0,.12), inset 0 1px 0 #ffffff;
+  --tt-radius:10px;
+  --tt-pad:8px 10px;
+  --tt-fz:12px;
+  --tt-offset:10px; /* 타겟과 말풍선 간격 */
+}
+
+/* 툴팁 타겟 공통 */
+[data-tooltip]{
+  position: relative; /* 기준 */
+}
+
+/* 기본 말풍선 */
+[data-tooltip]::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  top: auto;
+  bottom: calc(100% + var(--tt-offset));
+  transform: translateX(-50%) translateY(4px);
+  white-space: nowrap;
+
+  /* 스타일 */
+  background: linear-gradient(180deg, var(--tt-bg-from), var(--tt-bg-to));
+  color: var(--tt-text);
+  border: 1px solid var(--tt-bd);
+  border-radius: var(--tt-radius);
+  padding: var(--tt-pad);
+  font-size: var(--tt-fz);
+  font-weight: 700;
+  letter-spacing: .02em;
+  box-shadow: var(--tt-shadow);
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+/* 꼬리 */
+[data-tooltip]::before{
+  content: "";
+  position: absolute;
+  z-index: 9998;
+  left: 50%;
+  bottom: calc(100% + var(--tt-offset) - 4px);
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--tt-bg-to);
+  filter: drop-shadow(0 -1px 0 var(--tt-bd));
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+
+/* 호버/포커스 시 노출 */
+[data-tooltip]:hover::after,
+[data-tooltip]:focus-visible::after,
+[data-tooltip]:hover::before,
+[data-tooltip]:focus-visible::before{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ----- 위치 수정자 ----- */
+
+/* bottom */
+[data-tooltip][data-tip-pos="bottom"]::after{
+  top: calc(100% + var(--tt-offset));
+  bottom: auto;
+  transform: translateX(-50%) translateY(-4px);
+}
+[data-tooltip][data-tip-pos="bottom"]::before{
+  top: calc(100% + var(--tt-offset) - 4px);
+  bottom: auto;
+  border: 6px solid transparent;
+  border-bottom-color: var(--tt-bg-to);
+  filter: drop-shadow(0 1px 0 var(--tt-bd));
+}
+[data-tooltip][data-tip-pos="bottom"]:hover::after,
+[data-tooltip][data-tip-pos="bottom"]:focus-visible::after{
+  transform: translateX(-50%) translateY(0);
+}
+
+/* left */
+[data-tooltip][data-tip-pos="left"]::after{
+  left: auto; right: calc(100% + var(--tt-offset));
+  top: 50%; bottom: auto;
+  transform: translateY(-50%) translateX(4px);
+}
+[data-tooltip][data-tip-pos="left"]::before{
+  left: auto; right: calc(100% + var(--tt-offset) - 4px);
+  top: 50%; bottom: auto; transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: var(--tt-bg-to);
+  filter: drop-shadow(-1px 0 0 var(--tt-bd));
+}
+[data-tooltip][data-tip-pos="left"]:hover::after,
+[data-tooltip][data-tip-pos="left"]:focus-visible::after{
+  transform: translateY(-50%) translateX(0);
+}
+
+/* right */
+[data-tooltip][data-tip-pos="right"]::after{
+  left: calc(100% + var(--tt-offset)); right: auto;
+  top: 50%; bottom: auto;
+  transform: translateY(-50%) translateX(-4px);
+}
+[data-tooltip][data-tip-pos="right"]::before{
+  left: calc(100% + var(--tt-offset) - 4px); right: auto;
+  top: 50%; bottom: auto; transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-right-color: var(--tt-bg-to);
+  filter: drop-shadow(1px 0 0 var(--tt-bd));
+}
+[data-tooltip][data-tip-pos="right"]:hover::after,
+[data-tooltip][data-tip-pos="right"]:focus-visible::after{
+  transform: translateY(-50%) translateX(0);
+}
+
+/* 모션 최소화 환경 */
+@media (prefers-reduced-motion: reduce){
+  [data-tooltip]::after{
+    transition: none;
+  }
+}
+
+/* (선택) 어두운 배경에서 대비 강화 */
+[data-tooltip].tooltip--dark::after{
+  background: linear-gradient(180deg,#fff7c9,#ffd96a);
+}
+
+
+/* <button class="btn" data-tooltip="검색 실행" data-tip-pos="bottom">Search</button>
+<span data-tooltip="링크 복사" data-tip-pos="right">🔗</span>
+<div class="draggable-meta" data-tooltip="드래그해서 이동" data-tip-pos="top">…</div>
+ */

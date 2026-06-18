@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Butterfly Kids, Cabin, Londrina Solid, Climate Crisis -->
+  <link href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Cabin:ital,wght@0,400..700;1,400..700&family=Londrina+Solid&family=Climate+Crisis&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Doto:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Swiper CDN -->
+
+
+  <link rel="stylesheet" href="css/portfolioby__6xxnnk.css" />
+  <link rel="stylesheet" href="css/tooltips.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+<!-- <script>document.addEventListener('contextmenu', e => e.preventDefault());</script> -->
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- =========================
+      01. HERO (중앙 정렬, 100vh)
+    ========================= -->
+    <header class="hero" aria-labelledby="heroTitle">
+      <div class="hero__inner">
+        <h1 id="heroTitle" class="logo" aria-label="portfolio">
+          <span class="p">p</span><span class="o1">o</span><span class="r">r</span><span class="t">t</span>
+          <span class="f">f</span><span class="o2">o</span><span class="l">l</span><span class="i">i</span><span class="o3">o</span>
+        </h1>
+
+        <form class="search-wrap" id="searchForm" role="search">
+          <div class="search-bar">
+            <div class="input-area">
+              <input id="q" name="q" type="text" aria-label="검색어 입력" autocomplete="off" />
+              <div id="typingGhost" class="typing-ghost"></div>
+            </div>
+            <div class="select" aria-label="카테고리 선택">
+              <select id="cat" name="cat" aria-label="All Categories">
+                <option>All Categories</option>
+                <option>Introduce</option>
+                <option>Web Publishing</option>
+                <option>App redesign</option>
+                <option>Photoshop</option>
+                <option>personal projects</option>
+                <option>Wants Work</option>
+                <option>contact</option>
+              </select>
+              <span class="caret" aria-hidden="true"></span>
+            </div>
+            <button class="btn" type="submit">Search</button>
+          </div>
+        </form>
+
+<!--         <p class="hero__hint">
+          <span class="divider"></span>
+          © 2026 Yunkyung Cho
+          <span class="divider"></span>
+        </p> -->
+      </div>
+    </header>
+
+    <!-- =========================
+      02. ABOUT ME (전체가 100vh에 들어오게 그리드 재배치)
+    ========================= -->
+    <section class="about section about-cvmap" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+
+        <!-- 손글씨 타이틀 -->
+        <div class="cv-center" role="group" aria-label="About me heading" data-reveal>
+          <svg class="ink-title-svg" viewBox="0 0 1200 220" aria-labelledby="aboutTitle">
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" 
+            class="ink-title-stroke">  About me~*</text>
+          </svg>
+        </div>
+
+        <!-- 프로필 이미지 -->
+<!--         <div class="profile">
+          <img src="img/Polaroid Stack.png" alt="#">
+        </div> -->
+
+
+        <!-- 3x3 그리드로 모든 요소 한 화면에 배치 -->
+        <div class="cv-map-grid">
+          <article class="bubble oval bubble--bio" aria-labelledby="bioTitle" data-reveal>
+            <h3 id="bioTitle" class="bubble__label"></h3>
+            <ul class="list-plain">
+              <li><strong>조윤경</strong> Yunkyung Cho<br>
+              Web Designer & Marketing Designer</li>
+            </ul>
+          </article>
+          <article class="bubble oval bubble--bio2" aria-labelledby="bio2Title" data-reveal>
+            <h3 id="bio2Title" class="bubble__label">philosophy</h3>
+            <ul class="list-plain"> 
+              <li>브랜드의 감도와 사용자의 이해 흐름을 함께 설계합니다</li>
+              <li>보기 좋은 화면보다 읽히고 클릭되는 디자인을 만듭니다</li>
+            </ul>
+          </article>
+          <article class="bubble oval bubble--edu" aria-labelledby="eduTitle" data-reveal>
+            <h3 id="eduTitle" class="bubble__label">education</h3>
+            <ul class="list-plain">
+              <li>단국대학교 법학과 졸업</li>
+              <li><br> 그린컴퓨터아카데미</li>
+              <li> ‘UI/UX 반응형 웹제작을 위한 웹퍼블리셔 프론트엔드' 수료 
+                <br>(HTML·CSS·JS·반응형·Figma 프로토타입 실습 중심)</li>
+            </ul>
+          </article>
+
+          <article class="bubble oval bubble--char" aria-labelledby="charTitle" data-reveal>
+            <h3 id="charTitle" class="bubble__label">character</h3>
+            <ul class="list-plain">
+              <li>Curiosity — 새로운 트렌드와 기술에 열린 태도</li>
+              <li>Precision — 디테일을 완성하는 실행력</li>
+              <li>Empathy — 사용자와 브랜드를 이해하는 감각</li>
+              <li>Growth — 스스로 기회를 만드는 성장형 마인드</li>
+            </ul>
+          </article>
+
+          <article class="bubble oval bubble--exp" aria-labelledby="expTitle" data-reveal>
+            <h3 id="expTitle" class="bubble__label">experience</h3>
+            <ul class="list-plain">
+              <li>2025-2026 ㈜원츠 마케팅·웹디자인 실무<br>
+                  (병원 홈페이지 디자인/수정, 블로그 썸네일·카드뉴스·배너 제작)</li>
+              <li><br>2022 IT기업 ㈜와이폴라리스 마케팅 사원<br>
+                  (국제인공지능대전/리테일테크쇼 등 전시 기획 및 콘텐츠 운영)</li>
+              <li><br>브랜드 협업 SNS 콘텐츠 제작<br>
+                  (패션·뷰티 브랜드 중심 콘텐츠 기획·촬영·보정)</li>
+
+            </ul>
+          </article>
+
+          <article class="bubble oval bubble--social" aria-labelledby="socialTitle" data-reveal>
+          <h3 id="socialTitle" class="bubble__label">social</h3>
+          <ul class="list-plain">
+            <li>Email <a href="mailto:wholovesthesun@naver.com" class="tooltip-email">wholovesthesun@naver.com</a></li>
+            <li>Instagram <a href="https://instagram.com/6xxnnk" target="_blank" rel="noopener" class="tooltip-insta">@6xxnnk</a></li>
+            <li>
+              <a href="img/조윤경_입사지원서.pdf" target="_blank" rel="noopener" class="tooltip-portfolio">이력서.pdf</a>
+            </li>          
+          </ul>
+          </article>
+
+          <article class="bubble oval bubble--skills" aria-labelledby="skillsTitle" data-reveal>
+            <h3 id="skillsTitle" class="bubble__label">skills</h3>
+            <ul class="list-plain">
+              <li>Design: Photoshop, Illustrator, Figma</li>
+              <li>Frontend: HTML, CSS, JavaScript</li>
+              <li>Content: 카드뉴스, 블로그 썸네일, 배너</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    
+<!-- =========================
+03 PROJECTS (세로 1열 큰 카드 + 지그재그 아이폰 4대)
+========================= -->  
+<section class="projects">
+<div class="container">
+  <strong class="projects-title">Table of contents</strong>
+  <span class="projects-p">  디바이스에 마우스를 올려 컨텐츠를 확인해보세요</span>
+
+  <div class="projects-grid">
+
+
+      <!-- =========================
+  Project 01. WANTS REAL WORK
+  원츠 실무 작업물
+========================= -->
+<section class="project project--wonts" id="wonts" aria-labelledby="wontsTitle">
+  <div class="wonts-mark">.</div>
+
+  <div class="wonts-hero">
+    <div class="wonts-hero__copy">
+<!--       <span class="wonts-kicker">Real Work Experience</span> -->
+      <h2 id="wontsTitle">
+        Website Publishing
+      </h2>
+      <p>
+        ㈜원츠에서 병원 홈페이지 디자인 보완, 반응형 화면 수정,
+        블로그 썸네일·카드뉴스·배너 제작을 진행했습니다.
+        단순히 예쁜 이미지를 만드는 것보다, 의료 콘텐츠에 맞는 신뢰감과
+        정보 전달력을 함께 고려했습니다.
+      </p>
+
+      <div class="wonts-chip-list" aria-label="원츠 실무 핵심 역량">
+        <span>Web Design</span>
+        <span>HTML/CSS</span>
+        <span>Card News</span>
+        <span>Blog Thumbnail</span>
+        <span>Hospital Branding</span>
+      </div>
+    </div>
+
+<!--     <div class="wonts-hero__badge">
+      <strong>01</strong>
+      <span>WANTS<br>REAL WORK</span>
+    </div> -->
+  </div>
+
+ <!-- 사상튼튼정형외과 홈페이지 -->
+<article class="wonts-web-showcase">
+  <div class="device--imac device--imac-wonts">
+    <!-- iMac 본체 -->
+    <div class="imac-shell">
+      <div class="top-panel">
+        <div class="facetime"></div>
+
+        <div class="display-panel">
+          <div class="embed-scale-wrap" data-design="1920x1080">
+            <iframe
+              class="site-embed"
+              src="https://www.sasangteunteun.co.kr/"
+              title="Sasang Teunteun Orthopedic Clinic Website"
+              loading="lazy"
+            ></iframe>
+
+            <div class="embed-fallback">
+              <p>브라우저가 홈페이지 임베드를 차단했어요.</p>
+              <a href="https://www.sasangteunteun.co.kr/" target="_blank" rel="noopener">
+                새 탭으로 열기 →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-panel">
+        <div class="apple-logo"></div>
+      </div>
+
+      <div class="stand">
+        <div class="stand-right"></div>
+        <div class="stand-left"></div>
+      </div>
+    </div>
+
+    <!-- 원츠 설명 팝업 -->
+    <div class="floating-window floating-window--imac-br floating-window--wonts"
+         role="dialog"
+         aria-labelledby="wontsWebTitle"
+         data-draggable>
+      <div class="window-header" data-drag-handle>
+        <h4 id="wontsWebTitle" class="window-title">Sasang Teunteun Website</h4>
+
+        <div class="window-controls" aria-hidden="true">
+          <span class="window-minimize"></span>
+          <span class="window-maximize"></span>
+          <span class="window-close"></span>
+        </div>
+      </div>
+
+      <div class="window-content">
+        <span class="wonts-window-label">Website Design / Publishing Support</span>
+
+        <ul class="meta-bullets">
+          <li><strong>사상튼튼정형외과 홈페이지</strong> 디자인 보완</li>
+          <li>메인 비주얼·진료 안내·CTA 영역 정보 흐름 정리</li>
+          <li><strong>HTML/CSS</strong> 기반 화면 수정 및 반응형 레이아웃 점검</li>
+          <li>병원 업종에 맞는 신뢰감 있는 톤앤매너 적용</li>
+        </ul>
+
+        <div class="meta-actions">
+          <a class="meta-btn" href="https://www.sasangteunteun.co.kr/" target="_blank" rel="noopener">
+            홈페이지 보기
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+  <!-- =========================
+  WANTS BLOG CONTENT DESIGN
+  대표 썸네일 클릭 → 카드뉴스 팝업 슬라이드
+========================= -->
+<!-- =========================
+  WANTS BLOG CONTENT DESIGN
+  박스 안에서 바로 넘겨보는 카드뉴스 Swiper
+========================= -->
+<article class="wonts-content-showcase">
+  <div class="wonts-content-head">
+    <span class="wonts-kicker">Blog Thumbnail / Card News / Banner</span>
+    <h3>Blog content design</h3>
+    <p>
+      의료 콘텐츠는 과하게 자극적이면 신뢰도가 떨어지고, 너무 딱딱하면 클릭으로 이어지기 어렵습니다.
+      그래서 주제별로 색감과 레이아웃을 다르게 잡되, 제목이 먼저 읽히는 구조와 깔끔한 정보 정리를 중심으로 작업했습니다.
+    </p>
+  </div>
+
+  <div class="wonts-content-meta">
+    <article>
+      <strong>01</strong>
+      <span>진료 주제별 썸네일·카드뉴스 템플릿 제작</span>
+    </article>
+
+    <article>
+      <strong>02</strong>
+      <span>제목, 이미지, 강조 컬러를 조합한 첫 화면 구성</span>
+    </article>
+
+    <article>
+      <strong>03</strong>
+      <span>의료법을 고려한 과장 없는 문구와 신뢰감 있는 비주얼</span>
+    </article>
+  </div>
+
+  <div class="blog-inline-swiper-grid" aria-label="원츠 병원 블로그 카드뉴스 작업물">
+
+    <!-- 01. 대상포진 -->
+    <article class="blog-inline-card">
+      <div class="blog-inline-swiper swiper blogSwiperPox">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-02-main.jpg" alt="대상포진 대표 썸네일">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-03-definition.jpg" alt="대상포진 정보 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-04-feature.jpg" alt="대상포진 비교 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-05-symptom.jpg" alt="대상포진 증상 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/baekcheon-pox-01-treatment.jpg" alt="대상포진 치료 안내">
+          </div>
+        </div>
+
+        <div class="swiper-button-prev blog-pox-prev"></div>
+        <div class="swiper-button-next blog-pox-next"></div>
+        <div class="swiper-pagination blog-pox-pagination"></div>
+      </div>
+
+      <div class="blog-inline-info">
+        <span>01 / Baekcheon Clinic</span>
+        <h4>대상포진 카드뉴스</h4>
+        <p>
+          피부 질환 정보 콘텐츠로, 증상·특징·치료 안내를 한 흐름으로 읽히도록 구성했습니다.
+        </p>
+        <em>5 slides / Blog image</em>
+      </div>
+    </article>
+
+    <!-- 02. 두통 -->
+    <article class="blog-inline-card">
+      <div class="blog-inline-swiper swiper blogSwiperHeadache">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/bingbing-headache-02-main.jpg" alt="두통 대표 썸네일">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/bingbing-headache-03-cause.jpg" alt="두통 원인 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/bingbing-headache-04-symptom.jpg" alt="두통 증상 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/bingbing-headache-05-test.jpg" alt="두통 검진 안내">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/bingbing-headache-01-treatment.jpg" alt="두통 치료 안내">
+          </div>
+        </div>
+
+        <div class="swiper-button-prev blog-headache-prev"></div>
+        <div class="swiper-button-next blog-headache-next"></div>
+        <div class="swiper-pagination blog-headache-pagination"></div>
+      </div>
+
+      <div class="blog-inline-info">
+        <span>02 / Bingbing ENT Clinic</span>
+        <h4>두통 카드뉴스</h4>
+        <p>
+          원인, 증상, 검진, 치료 정보를 순서대로 전달할 수 있도록 카드뉴스 구조를 정리했습니다.
+        </p>
+        <em>5 slides / Blog image</em>
+      </div>
+    </article>
+
+    <!-- 03. 메니에르병 -->
+    <article class="blog-inline-card">
+      <div class="blog-inline-swiper swiper blogSwiperMeniere">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/bingbing-meniere-02-main.jpg" alt="메니에르병 대표 썸네일">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/bingbing-meniere-03-definition.jpg" alt="메니에르병 정보 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/bingbing-meniere-04-symptom.jpg" alt="메니에르병 증상 카드">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/bingbing-meniere-05-treatment.jpg" alt="메니에르병 치료 안내">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="img/bingbing-meniere-01-care.jpg" alt="메니에르병 관리 카드">
+          </div>
+        </div>
+
+        <div class="swiper-button-prev blog-meniere-prev"></div>
+        <div class="swiper-button-next blog-meniere-next"></div>
+        <div class="swiper-pagination blog-meniere-pagination"></div>
+      </div>
+
+      <div class="blog-inline-info">
+        <span>03 / Bingbing ENT Clinic</span>
+        <h4>메니에르병 카드뉴스</h4>
+        <p>
+          질환 정의부터 증상, 치료, 관리 방법까지 이어지는 정보형 카드뉴스로 구성했습니다.
+        </p>
+        <em>5 slides / Blog image</em>
+      </div>
+    </article>
+
+  </div>
+</article>
+
+
+<!-- =========================
+  BLOG CONTENT MODAL SWIPER
+  팝업 슬라이드
+========================= -->
+<div class="blog-modal" id="blogModal" aria-hidden="true">
+  <div class="blog-modal__overlay" data-blog-close></div>
+
+  <div class="blog-modal__panel" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle">
+    <div class="blog-modal__header">
+      <div>
+        <span id="blogModalCategory">Blog Content</span>
+        <h3 id="blogModalTitle">Card News Preview</h3>
+      </div>
+
+      <button class="blog-modal__close" type="button" data-blog-close aria-label="팝업 닫기">
+        ×
+      </button>
+    </div>
+
+    <div class="blog-modal__body">
+      <div class="swiper blogContentSwiper">
+        <div class="swiper-wrapper" id="blogSwiperWrapper">
+          <!-- JS에서 슬라이드 자동 삽입 -->
+        </div>
+
+        <div class="swiper-button-prev blog-swiper-prev"></div>
+        <div class="swiper-button-next blog-swiper-next"></div>
+        <div class="swiper-pagination blog-swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+      <!-- =========================
+        Project 02. Nespresso
+        기존 네스프레소 프로젝트
+      ========================= -->
+    <!-- ========== Project 01: Nespresso ========== -->    <section class="project project--nespresso">
+      <div id="nespresso" class="nespresso">..</div>
+
+      <div class="device--imac">
+        <!-- iMac 본체 -->
+        <div class="imac-shell">
+          <div class="top-panel">
+            <div class="facetime"></div>
+            <div class="display-panel">
+              <div class="embed-scale-wrap" data-design="1920x1080">
+                <iframe
+                  class="site-embed"
+                  src="https://6xxnnk.github.io/index/?v=20251112b"
+                  title="Nespresso Website — by 6xxnnk"
+                  loading="lazy"
+                ></iframe>
+                <div class="embed-fallback">
+                  <p>브라우저가 임베드를 차단했어요.</p>
+                  <a href="https://6xxnnk.github.io/index/" target="_blank" rel="noopener">새 탭으로 열기 →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-panel">
+            <div class="apple-logo"></div>
+          </div>
+          <div class="stand">
+            <div class="stand-right"></div>
+            <div class="stand-left"></div>
+          </div>
+        </div>
+
+        <!-- ⚡ 팝업 (드래그 가능 + 오른쪽 하단 고정) -->
+        <div class="floating-window floating-window--imac-br"
+             role="dialog"
+             aria-labelledby="nespWinTitle"
+             data-draggable>
+          <div class="window-header" data-drag-handle>
+            <h4 id="nespWinTitle" class="window-title">Nespresso Website</h4>
+            <div class="window-controls" aria-hidden="true">
+              <span class="window-minimize"></span>
+              <span class="window-maximize"></span>
+              <span class="window-close"></span>
+            </div>
+          </div>
+
+          <div class="window-content">
+            <ul class="meta-bullets">
+              <li><strong>Figma</strong> 디자인</li>
+              <li><strong>반응형 웹사이트</strong> 구현</li>
+              <li><strong>UI/UX 플로우·디자인 시스템</strong> 구축</li>
+              <li>브랜드 아이덴티티 강화 · 사용자 경험 개선</li>
+            </ul>
+
+            <div class="meta-actions">
+              <a class="meta-btn" href="https://6xxnnk.github.io/index/" target="_blank" rel="noopener">홈페이지 보기 </a>
+              <a class="meta-btn meta-btn--ghost" href="./img/조윤경_네스프레소.pdf" target="_blank" rel="noopener">작업과정 보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Project 02: Tamburins ========== -->
+ <section class="project project--tamburins">
+  <div id="tamburins" class="nespresso">...</div>
+
+  <div class="device--imac">
+    <!-- iMac 본체 -->
+    <div class="imac-shell">
+      <div class="top-panel">
+        <div class="facetime"></div>
+
+        <div class="display-panel">
+          <!-- ✅ 심플/안정: 고정 비율 래퍼 + 100% iframe -->
+          <div class="figma-responsive">
+            <iframe
+              class="figma-frame"
+              title="Tamburins Prototype"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FITm4CrIOfPwxeZ9xGSLQDV%2F%25EC%25A1%25B0%25EC%259C%25A4%25EA%25B2%25BD_TAMBURINS%25ED%2594%25BC%25EA%25B7%25B8%25EB%25A7%2588%25ED%2599%2594%25EB%25A9%25B4%3Fnode-id%3D1-7%26page-id%3D0%253A1%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26hide-ui%3D1"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="clipboard-write; autoplay"
+              sandbox="allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-popups allow-presentation"
+            ></iframe>
+          </div>
+
+          <!-- Fallback: 차단/오류 시 노출 -->
+          <div class="embed-fallback">
+            <p>브라우저가 Figma 임베드를 차단했어요.</p>
+            <a
+              href="https://www.figma.com/proto/ITm4CrIOfPwxeZ9xGSLQDV/%EC%A1%B0%EC%9C%A4%EA%B2%BD_TAMBURINS%ED%94%BC%EA%B7%B8%EB%A7%88%ED%99%94%EB%A9%B4?node-id=1-7&t=9vRkTfg28ClEPhNe-0&scaling=scale-down-width&zoom=1&content-scaling=fixed&page-id=0%3A1"
+              target="_blank" rel="noopener"
+            >새 탭으로 열기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-panel">
+        <div class="apple-logo"></div>
+      </div>
+      <div class="stand">
+        <div class="stand-right"></div>
+        <div class="stand-left"></div>
+      </div>
+    </div>
+
+    <!-- ⚡ 팝업 (드래그 가능 + 오른쪽 하단 고정) -->
+    <div class="floating-window floating-window--imac-br"
+         role="dialog"
+         aria-labelledby="tamburinsWinTitle"
+         data-draggable>
+      <div class="window-header" data-drag-handle>
+        <h4 id="tamburinsWinTitle" class="window-title">Tamburins Prototype</h4>
+        <div class="window-controls" aria-hidden="true">
+          <span class="window-minimize"></span>
+          <span class="window-maximize"></span>
+          <span class="window-close"></span>
+        </div>
+      </div>
+
+      <div class="window-content">
+        <ul class="meta-bullets">
+          <li><strong>Figma</strong> 프로토타입</li>
+          <li><strong>UI/UX 플로우·디자인 시스템</strong> 구축</li>
+          <li>브랜드 무드 시각화 · 감각적인 인터랙션 구현</li>
+        </ul>
+
+        <div class="meta-actions">
+          <a class="meta-btn" href="https://www.figma.com/proto/ITm4CrIOfPwxeZ9xGSLQDV/%EC%A1%B0%EC%9C%A4%EA%B2%BD_TAMBURINS%ED%94%BC%EA%B7%B8%EB%A7%88%ED%99%94%EB%A9%B4?node-id=1-7&t=9vRkTfg28ClEPhNe-0&scaling=scale-down-width&zoom=1&content-scaling=fixed&page-id=0%3A1" target="_blank" rel="noopener">프로토타입 보기 </a>
+          <a class="meta-btn meta-btn--ghost" href="./img/조윤경_탬버린즈.pdf" target="_blank" rel="noopener">작업과정 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 2: Glossier — iPhone (1대) -->
+<section class="phones" id="phones">
+  <div id="glossier" class="glossier">...</div>
+
+  <div class="phone-row" id="glossier-phones">
+    <!-- 1) 왼쪽: 온보딩 이미지 iPhone -->
+    <div class="phone-pair">
+      <div class="frame-base phone-glossier phone-onboarding">
+        <div class="layer2">
+          <div class="screen">
+            <!-- 단일 온보딩 이미지 -->
+            <img class="onboarding-shot" src="img/글로시에온보딩.jpg" data-design="390x844" alt="Glossier Onboarding" />
+          </div>
+          <div class="mask">
+            <span class="speaker"></span>
+            <span class="camera"><span class="lenz left"></span><span class="lenz right"></span></span>
+          </div>
+        </div>
+        <span class="side-button mute"></span>
+        <span class="side-button volume-up"></span>
+        <span class="side-button volume-down"></span>
+        <span class="side-button hold"></span>
+        <span class="port"></span>
+      </div>
+
+      <!-- 2) 오른쪽: 실제 사이트 iPhone -->
+      <div class="frame-base phone-glossier phone-live">
+        <div class="layer2">
+          <div class="screen">
+            <div class="phone-embed-wrap" data-design="390x844" data-zoom="1">
+              <iframe
+                class="phone-embed"
+                src="https://6xxnnk.github.io/glossier.renewal/"
+                title="Glossier Mobile (Live)"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="mask">
+            <span class="speaker"></span>
+            <span class="camera"><span class="lenz left"></span><span class="lenz right"></span></span>
+          </div>
+        </div>
+        <span class="side-button mute"></span>
+        <span class="side-button volume-up"></span>
+        <span class="side-button volume-down"></span>
+        <span class="side-button hold"></span>
+        <span class="port"></span>
+      </div>
+    </div><!--  -->
+
+    <!-- 3) META 카드 -->
+    <div class="phone-meta phone-meta--glossier g-card-meta">
+      <h3>Glossier Mobile App</h3>
+      <p class="meta-desc">
+        아이폰13,14 레이아웃<br>
+        홈 → 상품 탐색 → 결제까지 <strong>핵심 플로우를 간결하게 연결</strong> <br>
+        <strong>디자인 시스템</strong>과 <strong>모션</strong>으로 실제 앱 감도 강화
+      </p>
+
+      <div class="meta-actions">
+        <a class="meta-btn" href="https://6xxnnk.github.io/glossier.renewal/" target="_blank" 
+        rel="noopener">사이트 열기</a>
+        <a class="meta-btn meta-btn--ghost" href="img/조윤경_글로시에_결합.pdf"
+         target="_blank" rel="noopener">작업과정 보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="proj proj--zigzag-v2" id="zigzag">
+  <div class="zigzag">....</div>
+
+  <div class="zz-layout">
+    <!-- 왼쪽: 2x2 썸네일 (각 버튼에 표시할 mock 이미지 경로를 data-mock에 명시) -->
+    <div class="zz-left" id="zzThumbs">
+      <button class="zz-thumb is-active" data-target="1" data-tooltip="click me!" aria-label="썸네일 1"
+              data-mock="./img/zigzag-homemockup.png">
+        <img src="./img/zigzag--home.jpg" alt="">
+        <span class="dot">1</span>
+      </button>
+
+      <button class="zz-thumb" data-target="2" data-tooltip="click me!" aria-label="썸네일 2"
+              data-mock="./img/zigzag-productmockup.png">
+        <img src="./img/zigzag--product.jpg" alt="">
+        <span class="dot">2</span>
+      </button>
+
+      <button class="zz-thumb" data-target="3" data-tooltip="click me!" aria-label="썸네일 3"
+              data-mock="./img/zigzag-ordermockup.png">
+        <img src="img/zigzag--order.jpg" alt="">
+        <span class="dot">3</span>
+      </button>
+
+      <button class="zz-thumb" data-target="4" data-tooltip="click me!" aria-label="썸네일 4"
+              data-mock="./img/zigzag-mypagemockup.png">
+        <img src="./img/zigzag--mypage.jpg" alt="">
+        <span class="dot">4</span>
+      </button>
+    </div>
+
+    <!-- 오른쪽: 단일 스테이지 -->
+    <div class="zz-right" id="zzRight">
+      <figure class="zz-stage" aria-live="polite">
+        <!-- 초기 노출 이미지는 is-active 썸네일의 data-mock과 일치 -->
+        <img id="zzStageImg" src="./img/zigzag-homemockup.png" alt="" data-src="./img/zigzag-homemockup.png">
+      </figure>
+      <noscript>
+        <img src="./img/zigzag-homemockup.png" alt="">
+      </noscript>
+    </div>
+  </div>
+
+  <div class="g-card-meta phone-meta zz-meta--zigzag">
+    <h3>ZigZag App Renewal</h3>
+    <p class="meta-desc">
+      탐색 → 상품 → 결제까지 핵심 플로우를 단축시킨 <br>
+      <strong>콘텐츠 중심 설계</strong>
+    </p>
+    <ul class="meta-bullets">
+      <li>필터 구조 개선으로 <strong>탐색 효율 향상</strong></li>
+      <li>팝업 최소화 및 <strong>개인화 피드 강화</strong></li>
+      <li>가격 신뢰도 확보를 위한 <strong>할인가 시각화</strong></li>
+    </ul>
+    <div class="meta-actions">
+      <a class="meta-btn" href="img/조윤경_지그재그.pdf" target="_blank" rel="noopener">작업과정 보기</a>
+    </div>
+  </div>
+</section>
+
+
+<!--4. 29cm -->
+<section class="cm-section-29" id="cm29">
+  <div id="29CM" class="cm29">.....</div>
+  <div class="cm-row">
+    <!-- 1 -->
+    <figure class="cm-phone">
+      <div class="cm-frame">
+        <span class="cm-notch"></span>
+        <div class="cm-screen">
+          <img src="img/cmhome.jpg" alt="29CM Home">
+        </div>
+        <span class="cm-bezel" aria-hidden="true"></span>
+        <span class="cm-rim" aria-hidden="true"></span>
+      </div>
+    </figure>
+
+    <!-- 2 -->
+    <figure class="cm-phone">
+      <div class="cm-frame">
+        <span class="cm-notch"></span>
+        <div class="cm-screen">
+          <img src="img/cmshop.jpg" alt="29CM Shop">
+        </div>
+        <span class="cm-bezel" aria-hidden="true"></span>
+        <span class="cm-rim" aria-hidden="true"></span>
+      </div>
+    </figure>
+
+    <!-- 3 -->
+    <figure class="cm-phone">
+      <div class="cm-frame">
+        <span class="cm-notch"></span>
+        <div class="cm-screen">
+          <img src="img/cmdetail.jpg" alt="29CM Detail">
+        </div>
+        <span class="cm-bezel" aria-hidden="true"></span>
+        <span class="cm-rim" aria-hidden="true"></span>
+      </div>
+    </figure>
+
+    <!-- 4 -->
+    <figure class="cm-phone">
+      <div class="cm-frame">
+        <span class="cm-notch"></span>
+        <div class="cm-screen">
+          <img src="img/cmorder.jpg" alt="29CM Order">
+        </div>
+        <span class="cm-bezel" aria-hidden="true"></span>
+        <span class="cm-rim" aria-hidden="true"></span>
+      </div>
+    </figure>
+  </div>
+
+  <div class="phone-meta phone-meta--29cm g-card-meta2">
+  <h3>29CM App Redesign</h3>
+  <p class="meta-desc">
+    모바일 UX를 재구성한 <strong>포토샵 디자인</strong></p>
+
+  <div class="meta-actions">
+    <a class="meta-btn meta-btn" href="img/조윤경_29cm.pdf" target="_blank" rel="noopener">작업과정 보기</a>
+  </div>
+</div>
+</section>
+
+<!-- 
+=========================
+      04. instagram (갤러리 + 라이트박스)
+    ========================= -->
+<section class="ig" id="insta" >
+
+
+  <div class="ig__container">  
+    
+  <div class="ig__title">
+    <strong><br>Get<br>people<br>talking about</strong>
+    <p>your brand.</p>
+  </div>
+    <!-- 프로필 헤더 -->
+    <header class="ig-hd">
+      <div class="ig-hd__avatar">
+        <img src="img/인스타그램프로필.jpg" alt="프로필 사진">
+      </div>
+
+      <div class="ig-hd__main">
+        <div class="ig-hd__row">
+          <h1 class="ig-hd__username">
+            6xxnnk
+            <span class="ig-verified" aria-label="인증됨"></span>
+            <button class="ig-ellipsis" aria-label="더 보기">⋯</button>
+          </h1>
+          <div class="ig-actions">
+            <button class="ig-btn ig-btn--primary">팔로잉 ▾</button>
+            <button class="ig-btn">메시지</button>
+            <button class="ig-btn ig-btn--icon" aria-label="추천">
+              <svg viewBox="0 0 24 24" class="ig-icon"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 3.99 4 6.5 4c1.74 0 3.41 1.01 4.22 2.56C11.09 5.01 12.76 4 14.5 4c2.5 0 4.5 2 4.5 4.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <ul class="ig-counters">
+          <li><strong>777</strong><span>게시물</span></li>
+          <li><strong>2213</strong><span>팔로워</span></li>
+          <li><strong>1</strong><span>팔로우</span></li>
+        </ul>
+
+        <div class="ig-bio">
+          <div class="ig-bio__name">Creative Director @6xxnnk</div>
+          <div class="ig-bio__desc">
+Telling brand stories through visual moods.</div>
+
+ 
+        </div>
+      </div>
+    </header>
+
+    <!-- 탭바(형식만 유지) -->
+    <nav class="ig-tabs" role="tablist">
+      <button class="ig-tab is-active" data-tab="posts" aria-selected="true">
+        <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
+        <span>게시물</span>
+      </button>
+      <button class="ig-tab" data-tab="reels">
+        <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM7 5l4 6M13 5l4 6"/></svg>
+        <span>릴스</span>
+      </button>
+      <button class="ig-tab" data-tab="tagged">
+        <svg viewBox="0 0 24 24"><path d="M20.59 13.41L12 22l-8.59-8.59V4h9.41L22 12.59zM7 7a2 2 0 104 0 2 2 0 00-4 0z"/></svg>
+        <span>태그됨</span>
+      </button>
+      <span class="ig-tabs__underline"></span>
+    </nav>
+  </div>
+
+  <!-- 피드 그리드 (각 카드에 data-link만 채우면 됨) -->
+  <div class="ig__grid">
+    <article class="gallery-item"
+      data-brand="마뗑킴"
+      data-link="https://www.instagram.com/p/DPxl628jzS7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/마뗑킴1.jpg" alt="마뗑킴 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">MATIN KIM</span>
+          <!-- <span class="hashtag">#광고 Rough and Undefined @matinkim_magazine
+가을이 오면 가디건 위에 나시 입고
+블루진에 마뗑킴 모자를 얹어봐 ⋆⋆⋆ 👖🧢</span> -->
+        </footer>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-brand="엘엠씨"
+      data-link="https://www.instagram.com/p/C_-Cfd3S_u7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/엘엠씨.jpg" alt="엘엠씨 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">LMC</span>
+        </footer>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-brand="포터코리아"
+      data-link="https://www.instagram.com/p/C40UqCsyMgu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/포터.jpg" alt="포터코리아 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">PORTER KOREA</span>
+
+        </footer>
+      </div>
+    </article>
+    <article class="gallery-item" data-brand="폴리수엠"
+      data-link="https://www.instagram.com/p/ZZZZZZ/">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/폴리수엠.jpg" alt="포터코리아 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">POLYSOOEM</span>
+
+        </footer>
+      </div>
+    </article>
+    <article class="gallery-item" data-brand="아비브"
+      data-link="https://www.instagram.com/p/C-2LsOaSMcW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/아비브.jpg" alt="아비브 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">abib</span>
+
+        </footer>
+      </div>
+    </article>
+    <article class="gallery-item" data-brand="키르시"
+      data-link="https://www.instagram.com/p/Cx-jlJmrFgs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/키르시.jpg" alt="포터코리아 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">KIRSH</span>
+
+        </footer>
+      </div>
+    </article>
+    <article class="gallery-item" data-brand="아이뽀"
+      data-link="https://www.instagram.com/p/ClY4H3OS18N/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/ppppp.jpg" alt="아이뽀 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">AIPPO</span>
+
+        </footer>
+      </div>
+    </article>
+    <article class="gallery-item" data-brand="마리끌레르"
+      data-link="https://www.instagram.com/p/CqsvUXxrW4M/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA== ">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/마리.jpg" alt="포터코리아 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">MARIE CLAIRE</span>
+
+        </footer>
+      </div>
+    </article>
+    <article class="gallery-item" data-brand="뎁트"
+      data-link="https://www.instagram.com/p/Ch6-RMDra1m/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA== ">
+      <div class="post-card">
+        <div class="post-thumb tooltip-ig" data-tooltip="클릭 후 인스타그램으로 이동하기">
+          <img src="img/뎁트.jpg" alt="포터코리아 협찬 피드" loading="lazy">
+        </div>
+        <footer class="post-meta">
+          <span class="brand">DEPT</span>
+
+        </footer>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
+
+<!-- ================= Contact ================ -->
+<section class="creator-statement" aria-labelledby="creatorTitle">
+  <div class="creator__inner">
+    <h2 id="creatorTitle" class="creator__headline">
+      브랜드를 ‘보는 법’을 새롭게 만듭니다.
+    </h2>
+<p class="creator__desc">
+  리서치부터 연출·카피까지,  
+  한 장의 이미지로 캠페인을 완성합니다.<br><br>
+  현재 개인 프로젝트로 <strong> 브랜드 협업 콘텐츠</strong>를 제작 중입니다 <br>
+  마뗑킴(Matinkim)·아비브(Abib)·키르시(Kirsh)·LMC·포터코리아(PORTER KOREA) 등  <br>
+  다양한 브랜드의 룩북과 시즌 무드를 분석해 <strong >제품 콘셉트에 맞는 비주얼 연출</strong>을 기획하였고
+  <br>
+  <br>  
+  인스타그램 피드·스토리용 이미지와 영상 촬영, 후보정,  <br>
+  그리고 <strong>콘텐츠 확산을 위한 문구·카피라이팅까지 전 과정</strong>을 직접 담당했습니다
+</p>
+
+
+    <div class="contact__strengths" aria-label="핵심 강점">
+      <div class="pill">콘셉트 리서치 & 무드보드</div>
+      <div class="pill">비주얼 디렉션 & 연출</div>
+      <div class="pill">컬러 & 톤 보정 시스템</div>
+      <div class="pill">감각적 카피라이팅</div>
+    </div>
+  
+
+    
+  </div>
+</section>
+
+<section class="p-footer">
+<div class="footer-bg">
+  <span class="sun-dot sun-dot--1"></span>
+  <span class="sun-dot sun-dot--2"></span>
+  <span class="sun-dot sun-dot--3"></span>
+  <span class="sun-dot sun-dot--4"></span>
+</div>
+
+  <div class="footer-inner">
+    <h2 id="contactTitle" class="contact__title contact__title--final" aria-label="small details, big stories.">
+ <div class="small-wrap"> 
+      <span class="ch c1">s</span><span class="ch c2">m</span><span class="ch c3">a</span><span class="ch c4">l</span><span class="ch c5">l</span>
+  <span class="sp">&nbsp;</span>
+  <span class="ch c6">d</span><span class="ch c7">e</span><span class="ch c8">t</span><span class="ch c9">a</span><span class="ch c1">i</span><span class="ch c2">l</span><span class="ch c3">s</span><span class="ch c4">,</span>
+  <span class="sp">&nbsp;</span>
+<div class="big-wrap">
+  <span class="ch c5">b</span><span class="ch c6">i</span><span class="ch c7">g</span>
+  <span class="sp">&nbsp;</span>
+  <span class="ch c8">s</span><span class="ch c9">t</span><span class="ch c1">o</span><span class="ch c2">r</span><span class="ch c3">i</span><span class="ch c4">e</span><span class="ch c5">s</span><span class="ch c6">.</span>
+</div></h2>
+    <p class="contact__subtitle">
+      팀에 <span>실행력과 디테일</span>을 보탤
+     <span> 주니어 크리에이터 '조윤경' </span>입니다
+      
+    </p>
+  </div>
+</section>
+
+<section class="contact-chips" aria-labelledby="contactChipsTitle">
+  <div class="contact-chips__wrap">
+    <h2 id="contactChipsTitle" class="sr-only">Contact</h2>
+
+    <!-- 핵심 액션 칩들 -->
+    <nav class="chips" aria-label="연락/자료 링크">
+      <!-- Email -->
+      <a class="chip chip--ghost"href="https://mail.naver.com/write?to=wholovesthesun@naver.com&subject=%EC%A1%B0%EC%9C%A4%EA%B2%BD%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%EB%AC%B8%EC%9D%98&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%0D%0A%EC%A1%B0%EC%9C%A4%EA%B2%BD%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A5%BC%20%EB%B3%B4%EA%B3%A0%20%EA%B4%80%EC%8B%AC%EC%9D%B4%20%EC%83%9D%EA%B2%BC%EC%96%B4%EC%9A%94.%0D%0A%EA%B4%80%EB%A0%A8%20%EC%82%AC%ED%95%AD%EC%97%90%20%EB%8C%80%ED%95%9C%20%EC%98%81%EB%AC%B8%20%EC%A7%88%EB%AC%B8%EC%9D%84%20%EB%B3%B4%EB%82%B4%EC%A3%BC%EC%8B%9C%EB%A9%B4%20%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.%0D%0A%0D%0A---%0D%0AFrom:%20Yunkyung%20Cho"
+   target="_blank"
+   rel="noopener">
+        <span class="chip__icon" aria-hidden="true">✉️</span>
+        <span class="chip__label">Email</span>
+        <span class="chip__meta">wholovesthesun@naver.com</span>
+      </a>
+
+
+      <!-- Portfolio PDF / Resume -->
+      <a class="chip chip--ghost" href="img/조윤경_포트폴리오.pdf" target="_blank" rel="noopener">
+        <span class="chip__icon" aria-hidden="true">📄</span>
+        <span class="chip__label">Portfolio PDF</span>
+        <span class="chip__meta">download</span>
+      </a>
+
+      <!-- Notion / Process -->
+      <a class="chip chip--ghost" href="img/조윤경_입사지원서.pdf" target="_blank" rel="noopener">
+        <span class="chip__icon" aria-hidden="true">🗂️</span>
+        <span class="chip__label">Resume PDF</span>
+        <span class="chip__meta">download</span>
+      </a>
+
+      
+    </nav>
+
+
+    <!-- 서브 카피(선택) -->
+    <p class="chips__note">
+      © 2026 Yunkyung Cho. All rights reserved.
+    </p>
+  </div>
+</section>
+
+
+
+  </div><!-- .container -->
+
+  <!-- JS (분리 유지) -->
+  <script src="js/cursor-sun.js" defer></script>
+  <script src="js/click.js" defer></script>
+
+  <script src="js/hero.js" defer></script>
+  <script src="js/about-cvmap.js" defer></script>
+  <script src="js/about-ink.js" defer></script>
+
+  <script src="js/wants.js" defer></script>
+  
+
+  <script src="js/nespresso.js" defer></script>
+  <script src="js/draggable-meta.js"></script>
+
+  <script src="js/projects.js" defer></script>
+  <script src="js/projects-devices.js" defer></script>
+  <script src="js/tamburins.js" defer></script>
+
+  <script src="js/glossier.js"></script>
+
+  <script src="js/zigzag.js" defer></script>
+
+  <script src="js/cm29-mockups.js" defer></script>
+
+  <script src="js/instagram.js" defer></script>
+  <script src="js/instagram-tooltip.js" defer></script>
+
+
+  <script src="js/collabs.js" defer></script>
+
+
+<!--   <script src="js/ball.js" defer></script> -->
+
+</body>
+</html>
+
+

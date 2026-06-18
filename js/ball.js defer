@@ -1,0 +1,66 @@
+
+(function(){
+  const canvasEl = document.getElementById('contact-bounce');
+  if(!canvasEl) return;
+
+  const canvas = {
+    el: canvasEl,
+    get width(){ return this.el.clientWidth; },
+    get height(){ return this.el.clientHeight; }
+  };
+
+  const colors = ["#111", "#ffd74f", "#ffb35f", "#ffcf7f"]; // 노랑/오렌지 톤 + 잉크
+
+  function makeBall({color="#111", x=0, y=0, dx=2, dy=3, size=14}={}){
+    const el = document.createElement('span');
+    el.className = 'ball';
+    el.style.backgroundColor = color;
+    el.style.width = size + 'px';
+    el.style.height = size + 'px';
+    canvas.el.appendChild(el);
+
+    let px = Math.max(0, Math.min(x, canvas.width - size));
+    let py = Math.max(0, Math.min(y, canvas.height - size));
+    let vx = dx, vy = dy;
+
+    function tick(){
+      px += vx; py += vy;
+
+      // 벽 충돌 반사
+      if (px <= 0 || px >= canvas.width - size) vx = -vx;
+      if (py <= 0 || py >= canvas.height - size) vy = -vy;
+
+      el.style.transform = `translate(${px}px, ${py}px)`;
+      requestAnimationFrame(tick);
+    }
+    tick();
+  }
+
+  // 시작할 때 몇 개 뿌려주기
+  for(let i=0;i<5;i++){
+    makeBall({
+      color: colors[i % colors.length],
+      x: Math.random() * (canvas.width - 20),
+      y: Math.random() * (canvas.height - 20),
+      dx: (Math.random()>0.5?1:-1) * (1 + Math.random()*2.5),
+      dy: (Math.random()>0.5?1:-1) * (1 + Math.random()*2.5),
+      size: 12 + Math.round(Math.random()*6)
+    });
+  }
+
+  // 클릭 위치에서 공 생성
+  canvas.el.addEventListener('click', (e)=>{
+    const rect = canvas.el.getBoundingClientRect();
+    const size = 12 + Math.round(Math.random()*6);
+    makeBall({
+      color: colors[Math.floor(Math.random()*colors.length)],
+      x: e.clientX - rect.left - size/2,
+      y: e.clientY - rect.top  - size/2,
+      dx: (Math.random()>0.5?1:-1) * (1 + Math.random()*3),
+      dy: (Math.random()>0.5?1:-1) * (1 + Math.random()*3),
+      size
+    });
+  });
+
+  // 리사이즈 시에도 자연스럽게 계속 동작(별도 처리 불필요)
+})();
