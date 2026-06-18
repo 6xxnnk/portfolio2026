@@ -26,7 +26,7 @@
 </head>
 <body>
 
-  
+
   <div class="wrap">
 
     <!-- =========================
@@ -46,15 +46,16 @@
               <div id="typingGhost" class="typing-ghost"></div>
             </div>
             <div class="select" aria-label="카테고리 선택">
-              <select id="cat" name="cat" aria-label="All Categories">
-                <option>All Categories</option>
-                <option>Introduce</option>
-                <option>Web Publishing</option>
-                <option>App redesign</option>
-                <option>Photoshop</option>
-                <option>personal projects</option>
-                <option>Wants Work</option>
-                <option>contact</option>
+              <select id="cat" name="cat" aria-label="Portfolio Sections">
+                <option value="">All Categories</option>
+                <option value="#about">About Me</option>
+                <option value="#wonts">Wants Work</option>
+                <option value="#nespresso">Nespresso</option>
+                <option value="#tamburins">Tamburins</option>
+                <option value="#glossier">Glossier</option>
+                <option value="#zigzag">Zigzag</option>
+                <option value="#cm29">29CM</option>
+                <option value="#contact">Contact</option>
               </select>
               <span class="caret" aria-hidden="true"></span>
             </div>
@@ -119,10 +120,10 @@
           <article class="bubble oval bubble--char" aria-labelledby="charTitle" data-reveal>
             <h3 id="charTitle" class="bubble__label">character</h3>
             <ul class="list-plain">
-              <li>Curiosity — 새로운 트렌드와 기술에 열린 태도</li>
-              <li>Precision — 디테일을 완성하는 실행력</li>
-              <li>Empathy — 사용자와 브랜드를 이해하는 감각</li>
-              <li>Growth — 스스로 기회를 만드는 성장형 마인드</li>
+              <li>Curiosity : 새로운 트렌드와 기술에 열린 태도</li>
+              <li>Precision : 디테일을 완성하는 실행력</li>
+              <li>Empathy : 사용자와 브랜드를 이해하는 감각</li>
+              <li>Growth : 스스로 기회를 만드는 성장형 마인드</li>
             </ul>
           </article>
 
@@ -145,7 +146,7 @@
             <li>Email <a href="mailto:wholovesthesun@naver.com" class="tooltip-email">wholovesthesun@naver.com</a></li>
             <li>Instagram <a href="https://instagram.com/6xxnnk" target="_blank" rel="noopener" class="tooltip-insta">@6xxnnk</a></li>
             <li>
-              <a href="img/조윤경_입사지원서.pdf" target="_blank" rel="noopener" class="tooltip-portfolio">이력서.pdf</a>
+<!--               <a href="img/조윤경_입사지원서.pdf" target="_blank" rel="noopener" class="tooltip-portfolio">이력서.pdf</a> -->
             </li>          
           </ul>
           </article>
@@ -1114,6 +1115,8 @@ Telling brand stories through visual moods.</div>
   <!-- JS (분리 유지) -->
   <script src="js/cursor-sun.js" defer></script>
   <script src="js/click.js" defer></script>
+  
+  <script src="js/categories.js" defer></script>
 
   <script src="js/hero.js" defer></script>
   <script src="js/about-cvmap.js" defer></script>
