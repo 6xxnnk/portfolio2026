@@ -155,7 +155,7 @@ button:hover ~ #cursorSun,
 .logo .l{ color:#3b82f6 } .logo .i{ color:#8b5cf6 } .logo .o3{ color:#f97316 }
 
 .search-wrap{
-  width:min(110rem, 92vw - 2*var(--gutter));
+  width:min(110rem, calc(92vw - 2 * var(--gutter)));
   background:#fff; border-radius:5.6rem;
   box-shadow:0 .8rem 2.2rem rgba(0,0,0,.18);
   padding:.6rem; position:relative; margin-top:-.4rem;
@@ -1504,234 +1504,316 @@ button:hover ~ #cursorSun,
   }
 }
 
+/* =========================================================
+   07. Project 03 — Glossier iPhone Mockup
+   - 공통 iPhone 프레임
+   - Glossier 온보딩 이미지 + 실제 사이트 iframe
+   - 모바일에서 프레임 높이 과다/iframe 잘림 방지
+========================================================= */
+
+/* ---------- iPhone frame common ---------- */
 .frame-base{
-  display:block; width:31.96rem; height:66.44rem; background:#fff; border-radius:4.86rem;
-  position:relative; margin:0 auto; box-shadow: inset .2rem 0 1.2rem #494949;
+  position:relative;
+  display:block;
+  width:31.96rem;
+  height:64.2rem;
+  margin:0 auto;
+  background:#fff;
+  border-radius:4.5rem;
+  box-shadow:inset .2rem 0 1.2rem #494949;
 }
+
 .layer2{
-  width:30.66rem; height:65.14rem; background:#000; border-radius:4.46rem;
-  position:absolute; left:50%; top:.65rem; transform:translateX(-50%); box-shadow:-.2rem 0 1.5rem .15rem #494949;
+  position:absolute;
+  left:50%;
+  top:.65rem;
+  width:30.66rem;
+  height:62.9rem;
+  transform:translateX(-50%);
+  background:#000;
+  border-radius:4.1rem;
+  box-shadow:-.2rem 0 1.5rem .15rem #494949;
+  overflow:hidden;
 }
+
 .screen{
-  background:#fff; width:28.66rem; height:63.14rem; border-radius:3.86rem;
-  position:absolute; left:50%; top:.9rem; transform:translateX(-50%); overflow:hidden;
+  position:absolute;
+  left:50%;
+  top:1.55rem;
+  width:28.66rem;
+  height:60.9rem;
+  transform:translateX(-50%);
+  overflow:hidden;
+  background:#fff;
+  border-radius:3.45rem;
 }
-.side-button{ position:absolute; width:.3rem; background:linear-gradient(to bottom,#494949 0%,#aaa 12%,#ddd 50%,#aaa 88%,#494949 100%); }
+
+.side-button{
+  position:absolute;
+  width:.3rem;
+  background:linear-gradient(to bottom,#494949 0%,#aaa 12%,#ddd 50%,#aaa 88%,#494949 100%);
+}
 .mute{ height:2.5rem; top:7.5rem; left:-.1rem; border-radius:.15rem 0 0 .15rem; }
 .volume-up{ height:5rem; top:12.5rem; left:-.1rem; border-radius:.15rem 0 0 .15rem; }
 .volume-down{ height:5rem; top:19rem; left:-.1rem; border-radius:.15rem 0 0 .15rem; }
 .hold{ height:7.5rem; top:14.5rem; left:99.5%; border-radius:0 .15rem .15rem 0; }
-.port{ position:absolute; width:3rem; height:.2rem; bottom:0; left:50%; transform:translateX(-50%); background:#fff; border-radius:50% 50% 0 0; }
-.mask{ background:#000; width:16rem; height:2.5rem; border-radius:0 0 2rem 2rem; position:absolute; left:50%; top:-.1rem; transform:translateX(-50%); z-index:10; }
-.speaker{ position:absolute; height:.4rem; width:3.5rem; background:#222; border-radius:1rem; left:50%; top:.5rem; transform:translateX(-50%); }
-.camera{ position:absolute; height:.8rem; width:.8rem; background:#222; border-radius:50%; left:70%; top:.3rem; transform:translateX(-50%); }
+.port{
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:3rem;
+  height:.2rem;
+  transform:translateX(-50%);
+  background:#fff;
+  border-radius:50% 50% 0 0;
+}
+.mask{
+  position:absolute;
+  left:50%;
+  top:-.1rem;
+  z-index:10;
+  width:16rem;
+  height:2.5rem;
+  transform:translateX(-50%);
+  background:#000;
+  border-radius:0 0 2rem 2rem;
+}
+.speaker{
+  position:absolute;
+  left:50%;
+  top:.5rem;
+  width:3.5rem;
+  height:.4rem;
+  transform:translateX(-50%);
+  background:#222;
+  border-radius:1rem;
+}
+.camera{
+  position:absolute;
+  left:70%;
+  top:.3rem;
+  width:.8rem;
+  height:.8rem;
+  transform:translateX(-50%);
+  background:#222;
+  border-radius:50%;
+}
 .lenz.left{ position:absolute; width:.4rem; height:.4rem; left:.2rem; top:.2rem; background:#245; border-radius:50%; }
 .lenz.right{ position:absolute; width:.5rem; height:.5rem; left:.2rem; top:.1rem; background:#245; border-radius:50%; }
 
+/* ---------- Glossier layout ---------- */
 .glossier{
-  font-size: clamp(6rem, 8vw, 10rem);
-  margin: 0 0 2.4rem;
-  line-height: 1;
-  display:flex; flex-direction:column; align-items:flex-end;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  margin:0 0 2.4rem;
+  font-family:doto, sans-serif;
+  font-size:clamp(6rem, 8vw, 10rem);
+  line-height:1;
 }
 
 #glossier-phones{
-  display: grid;
-  grid-template-columns: minmax(64rem, 72rem) minmax(32rem, 1fr);
-  gap: 3rem;
-  align-items: start;
-  width: min(100%, var(--design-w, 120rem));
-  margin-inline: auto;
-
+  display:grid;
+  grid-template-columns:minmax(64rem, 72rem) minmax(32rem, 1fr);
+  gap:3rem;
+  align-items:start;
+  width:min(100%, var(--design-w, 120rem));
+  margin-inline:auto;
 }
 
 #glossier-phones .phone-pair{
-  display: grid;
-  grid-template-columns: 32rem 32rem;
-  gap: 2.4rem;
-  justify-content: center;
-  align-items: start;
-
-}
-
-.phone-glossier .side-button{ position:absolute; width:.3rem; background:linear-gradient(to bottom,#494949 0%,#aaa 12%,#ddd 50%,#aaa 88%,#494949 100%); }
-.phone-glossier .mute{ height:2.5rem; top:7.5rem; left:-.1rem; border-radius:.15rem 0 0 .15rem; }
-.phone-glossier .volume-up{ height:5rem; top:12.5rem; left:-.1rem; border-radius:.15rem 0 0 .15rem; }
-.phone-glossier .volume-down{ height:5rem; top:19rem; left:-.1rem; border-radius:.15rem 0 0 .15rem; }
-.phone-glossier .hold{ height:7.5rem; top:14.5rem; left:99.5%; border-radius:0 .15rem .15rem 0; }
-.phone-glossier .port{ position:absolute; width:3rem; height:.2rem; bottom:0; left:50%; transform:translateX(-50%); background:#fff; border-radius:50% 50% 0 0; }
-.phone-glossier .mask{ background:#000; width:16rem; height:2.5rem; border-radius:0 0 2rem 2rem; position:absolute; left:50%; top:-.1rem; transform:translateX(-50%); z-index:10; }
-.phone-glossier .speaker{ position:absolute; height:.4rem; width:3.5rem; background:#222; border-radius:1rem; left:50%; top:.5rem; transform:translateX(-50%); }
-.phone-glossier .camera{ position:absolute; height:.8rem; width:.8rem; background:#222; border-radius:50%; left:70%; top:.3rem; transform:translateX(-50%); }
-.phone-glossier .lenz.left{ position:absolute; width:.4rem; height:.4rem; left:.2rem; top:.2rem; background:#245; border-radius:50%; }
-.phone-glossier .lenz.right{ position:absolute; width:.5rem; height:.5rem; left:.2rem; top:.1rem; background:#245; border-radius:50%; }
-
-.phone-onboarding .onboarding-shot{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
+  display:grid;
+  grid-template-columns:32rem 32rem;
+  gap:2.4rem;
+  justify-content:center;
+  align-items:start;
+  max-width:100%;
 }
 
 .phone-glossier.frame-base{
-  display:block; width:31.96rem; height:66.44rem; background:#fff; border-radius:4.86rem;
-  position:relative; margin:0 auto; box-shadow: inset .2rem 0 1.2rem #494949;
+  width:31.96rem;
+  height:64.2rem;
 }
 .phone-glossier .layer2{
-  width:30.66rem; height:65.14rem; background:#000;
-  border-radius:4.46rem;
-  position:absolute; left:50%; top:.65rem;
-  transform:translateX(-50%); box-shadow:-.2rem 0 1.5rem .15rem #494949;
+  width:30.66rem;
+  height:62.9rem;
 }
-
 .phone-glossier .screen{
-  background:#fff; width:28.66rem; height:62rem;
-  border-radius:3.86rem;
-  position:absolute; left:50%; top:1.5rem;
-  transform:translateX(-50%); overflow:hidden;
+  width:28.66rem;
+  height:60.9rem;
+}
+.phone-onboarding .onboarding-shot{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
+/* 실제 글로시에 사이트 iframe */
 .phone-live .phone-embed-wrap{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: black;
-  transform-origin: top left;
-
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#fff;
+  transform:none;
 }
-
 .phone-live .phone-embed{
-  width: 100%;
-  height: auto;
-  border: 0;
-  outline: 0;
-  display: block;
-  transform-origin: top left;
-  will-change: transform;
-  z-index: 10;
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:100%;
+  max-width:none;
+  border:0;
+  outline:0;
+  background:#fff;
+  transform:none;
+  transform-origin:top left;
 }
 
+/* ---------- Glossier meta card ---------- */
 .g-card-meta.phone-meta{
-  border:1px solid #f2a8bb; border-radius:2rem; background:linear-gradient(180deg,#fff 0%,#fafafa 100%);
+  width:100%;
+  max-width:70rem;
+  margin-top:20rem;
+  padding:2.4rem 2rem;
+  text-align:center;
+  font-size:1.5rem;
+  border:1px solid #f2a8bb;
+  border-radius:2rem;
+  background:linear-gradient(180deg,#fff 0%,#fafafa 100%);
   box-shadow:0 .6rem 1.8rem rgba(0,0,0,.06), inset 0 0 0 .1rem rgba(240,240,240,.9);
-  padding:2.4rem 2rem; text-align:center; width:100%; max-width:70rem; margin-top:20rem;
-  transition:box-shadow .25s ease, transform .25s ease; font-size: 1.5rem;
+  transition:box-shadow .25s ease, transform .25s ease;
 }
 .g-card-meta.phone-meta:hover{
-  transform:translateY(-.2rem); box-shadow:0 1rem 2.6rem rgba(0,0,0,.1);
+  transform:translateY(-.2rem);
+  box-shadow:0 1rem 2.6rem rgba(0,0,0,.1);
 }
 .g-card-meta h3{
-  font-family:'Poppins','Noto Sans KR',sans-serif; font-weight:600; font-size:2rem; color:#111; letter-spacing:.01em; margin:0 0 .8rem;
+  margin:0 0 .8rem;
+  color:#111;
+  font-family:'Poppins','Noto Sans KR',sans-serif;
+  font-size:2rem;
+  font-weight:600;
+  letter-spacing:.01em;
 }
 .g-card-meta .meta-desc{
-  font-size:1.5rem; color:#000000; margin:0 0 1.6rem; line-height:1.65;
+  margin:0 0 1.6rem;
+  color:#000;
+  font-size:1.5rem;
+  line-height:1.65;
 }
 .g-card-meta .meta-bullets{
-  margin:0 0 2rem; padding:0; list-style:none;
+  margin:0 0 2rem;
+  padding:0;
+  list-style:none;
 }
 .g-card-meta .meta-bullets li{
-  margin:.4rem 0; font-size:1.35rem; color:#374151; line-height:1.5;
+  margin:.4rem 0;
+  color:#374151;
+  font-size:1.35rem;
+  line-height:1.5;
 }
-
 .g-card-meta .meta-actions{
-  display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.8rem;
 }
 .g-card-meta .meta-actions .meta-btn{
-  --glow: rgba(243, 170, 180, .45);
-  display:inline-flex; align-items:center; justify-content:center;
+  --glow:rgba(243, 170, 180, .45);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   min-width:12rem;
   padding:1rem 1.6rem;
+  border:.12rem solid transparent;
   border-radius:999rem;
-  font-weight:700; font-size:1.35rem;
-  text-decoration:none; border:.12rem solid transparent;
-  background:
-    radial-gradient(80% 140% at 50% 0%, #ffdbe4, #f7b6c7 45%, #f4a9be 100%);
+  background:radial-gradient(80% 140% at 50% 0%, #ffdbe4, #f7b6c7 45%, #f4a9be 100%);
+  box-shadow:0 .6rem 1.6rem var(--glow), inset 0 1px 0 #fff;
   color:#111;
-  box-shadow: 0 .6rem 1.6rem var(--glow), inset 0 1px 0 #fff;
-  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+  font-size:1.35rem;
+  font-weight:700;
+  text-decoration:none;
+  transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
 }
 .g-card-meta .meta-actions .meta-btn:hover{
-  transform: translateY(-.1rem); filter:saturate(1.05);
+  transform:translateY(-.1rem);
+  filter:saturate(1.05);
 }
-.g-card-meta .meta-actions .meta-btn:active{ transform: translateY(0); }
-
+.g-card-meta .meta-actions .meta-btn:active{ transform:translateY(0); }
 .g-card-meta .meta-actions .meta-btn--ghost{
-  background: #fff; color:#111;
-  border-color: #f2a8bb;
-  box-shadow: 0 .6rem 1.4rem rgba(242,168,187,.18), inset 0 1px 0 rgba(255,255,255,.85);
+  background:#fff;
+  border-color:#f2a8bb;
+  box-shadow:0 .6rem 1.4rem rgba(242,168,187,.18), inset 0 1px 0 rgba(255,255,255,.85);
+  color:#111;
 }
 .g-card-meta .meta-actions .meta-btn--ghost:hover{
-  background: linear-gradient(180deg,#fff,#fff7fb);
-  box-shadow: 0 .8rem 2rem rgba(242,168,187,.26);
+  background:linear-gradient(180deg,#fff,#fff7fb);
+  box-shadow:0 .8rem 2rem rgba(242,168,187,.26);
 }
 
+/* ---------- Glossier responsive ---------- */
 @media (max-width:1024px){
-
-  .phones{
-    padding:8rem 0;
-  }
+  .phones{ padding:8rem 0; }
 
   #glossier-phones{
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    grid-template-columns:minmax(0, 1.4fr) minmax(0, 1fr);
     gap:2.4rem;
     width:min(100%, 94vw);
   }
 
-  .g-card-meta.phone-meta{
-    margin-top:8rem;
-  }
+  .g-card-meta.phone-meta{ margin-top:8rem; }
 }
 
 @media (max-width:834px){
-
   .glossier{
-    font-size: clamp(3.6rem, 6vw, 6.4rem);
     align-items:flex-start;
     margin-bottom:1.6rem;
+    font-size:clamp(3.6rem, 6vw, 6.4rem);
   }
 
   #glossier-phones{
-    grid-template-columns: 1fr;
-    gap:3.2rem;
+    grid-template-columns:1fr;
     justify-items:center;
-    width:min(100%, 94vw);
+    gap:3.2rem;
+    width:100%;
+    max-width:94vw;
+    overflow-x:hidden;
   }
 
   #glossier-phones .phone-pair{
-    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-columns:repeat(2, minmax(0, 1fr));
     gap:1.8rem;
+    width:100%;
+    max-width:64rem;
   }
 
   .phone-glossier.frame-base{
-    width:clamp(22rem, 44vw, 30rem);
+    width:clamp(22rem, 44vw, 28rem);
     height:auto;
-    aspect-ratio:9 / 19;
+    aspect-ratio:9 / 17.5;
     border-radius:3.6rem;
   }
   .phone-glossier .layer2{
-    width:calc(100% - 1.3rem);
-    height:calc(100% - 1.3rem);
+    width:calc(100% - 1.2rem);
+    height:calc(100% - 1.2rem);
+    top:.6rem;
     border-radius:3.2rem;
-    top:.65rem;
-    left:50%;
-    transform:translateX(-50%);
   }
   .phone-glossier .screen{
-    width:calc(100% - 3.3rem);
-    height:calc(100% - 4.1rem);
+    width:calc(100% - 2.4rem);
+    height:calc(100% - 3rem);
     top:1.5rem;
-    border-radius:3rem;
+    border-radius:2.8rem;
   }
-
-  .phone-live .phone-embed-wrap{
-    inset:0;
-    transform:none;
-  }
-  .phone-live .phone-embed{
-    width:100%;
-    height:100%;
+  .phone-glossier .mask{
+    width:12rem;
+    height:2.1rem;
+    border-radius:0 0 1.8rem 1.8rem;
   }
 
   .g-card-meta.phone-meta{
@@ -1741,27 +1823,32 @@ button:hover ~ #cursorSun,
 }
 
 @media (max-width:480px){
-
   #glossier-phones .phone-pair{
     grid-template-columns:1fr;
+    justify-items:center;
     gap:1.6rem;
   }
 
   .phone-glossier.frame-base{
-    width:min(88vw, 30rem);
-    aspect-ratio:9 / 19;
-    border-radius:3.2rem;
+    width:min(76vw, 25.5rem);
+    aspect-ratio:9 / 17.2;
+    border-radius:3.3rem;
   }
-  .phone-glossier .layer2{ border-radius:2.8rem; }
-  .phone-glossier .screen{ border-radius:2.4rem; }
-
-    .phone-glossier .screen {
-    top: 2.2rem !important;
-    height: calc(100% - 5rem) !important;
+  .phone-glossier .layer2{
+    width:calc(100% - 1.1rem);
+    height:calc(100% - 1.1rem);
+    top:.55rem;
+    border-radius:2.95rem;
   }
-
-  .phone-glossier .layer2 {
-    top: 0.9rem !important;
+  .phone-glossier .screen{
+    width:calc(100% - 2.1rem);
+    height:calc(100% - 2.8rem);
+    top:1.4rem;
+    border-radius:2.45rem;
+  }
+  .phone-glossier .mask{
+    width:10.8rem;
+    height:1.9rem;
   }
 
   .g-card-meta.phone-meta{
@@ -1772,27 +1859,15 @@ button:hover ~ #cursorSun,
   }
   .g-card-meta h3{ font-size:1.8rem; }
   .g-card-meta .meta-desc{ font-size:1.4rem; }
-
 }
 
 @media (max-width:360px){
-
   .glossier{
+    margin-top:10rem;
     font-size:3.2rem;
-    margin-top: 10rem;
   }
-
-  .g-card-meta.phone-meta{
-    font-size:1.3rem;
-  }
-  .g-card-meta h3{
-    font-size:1.6rem;
-  }
-
-   .phone-glossier .screen {
-    top: 2.6rem !important;
-    height: calc(100% - 5.4rem) !important;
-  }
+  .g-card-meta.phone-meta{ font-size:1.3rem; }
+  .g-card-meta h3{ font-size:1.6rem; }
 }
 
 .zz-layout {
@@ -5570,4 +5645,129 @@ a,button,input,textarea,select{ cursor:pointer !important; }
   .about-cvmap .ink-title-stroke{
     font-size: 11.6rem !important;
   }
+}
+
+/* =========================================================
+   10. Final Safety Overrides
+   - 모바일 가로 스크롤 방지
+   - iframe 전역 max-width 강제 금지
+========================================================= */
+
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+.wrap,
+.container,
+.section,
+.projects,
+.projects .container,
+.projects-grid,
+.project,
+.phones,
+.ig,
+.creator-statement,
+.p-footer,
+.contact-chips{
+  max-width:100%;
+}
+
+img,
+video{
+  max-width:100%;
+}
+
+iframe{
+  max-width:none;
+}
+
+.projects-title,
+.cv-list,
+.meta-desc,
+.creator__headline,
+.creator__desc,
+.contact__subtitle,
+.window-title,
+.wonts-hero__copy p,
+.blog-inline-info p{
+  max-width:100%;
+  overflow-wrap:break-word;
+  word-break:keep-all;
+}
+
+@media (max-width:768px){
+  body{
+    padding-inline:1.6rem;
+    overflow-x:hidden;
+  }
+
+  .wrap,
+  .container{
+    width:100%;
+    max-width:100%;
+  }
+
+  .projects-title{
+    width:100%;
+    max-width:100%;
+    white-space:normal;
+    line-height:1.05;
+  }
+
+  .device--imac{
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  .floating-window{
+    max-width:calc(100vw - 3.2rem) !important;
+    box-sizing:border-box;
+  }
+
+  .meta-actions{
+    width:100%;
+    max-width:100%;
+    flex-wrap:wrap;
+  }
+
+  .meta-btn,
+  .meta-btn--ghost{
+    max-width:100%;
+    white-space:normal;
+    text-align:center;
+  }
+
+  .zz-layout,
+  .zz-left,
+  .zz-right,
+  .zz-stage{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  #zzStageImg{
+    max-width:100%;
+    width:100% !important;
+    transform:none !important;
+  }
+}
+
+@media (max-width:480px){
+  body{ padding-inline:1.2rem; }
+
+  .search-wrap,
+  .search-bar{
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  .select select{ max-width:9rem; }
+
+  .projects-title{ font-size:clamp(3rem, 11vw, 4.2rem); }
+
+  .floating-window{ max-width:calc(100vw - 2.4rem) !important; }
 }
