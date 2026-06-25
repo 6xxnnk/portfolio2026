@@ -6131,3 +6131,69 @@ iframe{
     margin-top: 1.4rem;
   }
 }
+/* =========================================================
+   ABOUT ME BACKGROUND INSIDE BORDER FIX
+========================================================= */
+
+.about-cvmap {
+  min-height: 100vh;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0 auto;
+  padding: 8.5rem 0 9rem;
+  position: relative;
+  overflow: hidden;
+  transform: none;
+
+  /* 바깥 배경은 흰색으로 */
+  background: #fff;
+}
+
+/* 테두리 안쪽 배경 박스 */
+.about-cvmap::before {
+  content: "";
+  position: absolute;
+  inset: 3.2rem;
+  z-index: 0;
+  pointer-events: none;
+
+  border: 0.1rem solid rgba(17, 17, 17, 0.08);
+  border-radius: 4rem;
+
+  background:
+    radial-gradient(circle at 10% 18%, rgba(242, 183, 5, 0.18), transparent 28%),
+    radial-gradient(circle at 86% 14%, rgba(14, 165, 233, 0.12), transparent 26%),
+    radial-gradient(circle at 76% 82%, rgba(225, 29, 72, 0.08), transparent 30%),
+    linear-gradient(180deg, #fffdf8 0%, #ffffff 48%, #f8fbff 100%);
+}
+
+/* 격자 무늬도 테두리 안쪽으로 */
+.about-cvmap::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  z-index: 0;
+  pointer-events: none;
+
+  width: min(108rem, calc(100% - 9rem));
+  height: 64rem;
+
+  transform: translate(-50%, -50%) rotate(-2deg);
+  border-radius: 4rem;
+
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, 0.026) 0.1rem, transparent 0.1rem),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.022) 0.1rem, transparent 0.1rem);
+  background-size: 3.2rem 3.2rem;
+  opacity: 0.55;
+}
+
+/* 실제 콘텐츠는 배경 위로 */
+.about-cvmap .container {
+  width: min(100%, var(--design-w));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
